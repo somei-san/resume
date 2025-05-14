@@ -1,0 +1,32 @@
+name: Convert Markdown to PDF
+
+on:
+  push:
+    paths:
+      - 'resume.md'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget texlive-xetex texlive-lang-japanese
+          wget https://github.com/jgm/pandoc/releases/download/3.1.11.1/pandoc-3.1.11.1-1-amd64.deb
+          sudo dpkg -i pandoc-3.1.11.1-1-amd64.deb
+
+      - name: Convert resume.md to PDF
+        run: |
+          mkdir -p output
+          pandoc resume.md -o output/resume.pdf --pdf-engine=xelatex -V documentclass=ltjarticle
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: output/resume.pdf
