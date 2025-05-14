@@ -6,11 +6,10 @@
 
 生: 1991年3月12日
 
-Github: https://github.com/somei-san
-
-Qitta: https://qiita.com/goyaYellow
-
 ## 職務概要
+
+- 生産技術
+- 請求書管理Saas
 
 ## テクニカルスキル
 
@@ -21,6 +20,12 @@ Qitta: https://qiita.com/goyaYellow
 ## 経歴詳細（例）
 
 ## 資格など
+
+## リンク
+
+Github: https://github.com/somei-san
+
+Qitta: https://qiita.com/goyaYellow
 
 ## 学歴
 
