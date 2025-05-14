@@ -23,8 +23,8 @@
 
 ## リンク
 
-- [Github](https://github.com/somei-san)
-- [Qitta](https://qiita.com/goyaYellow)
+* [Github](https://github.com/somei-san)
+* [Qitta](https://qiita.com/goyaYellow)
 
 ## 学歴
 
