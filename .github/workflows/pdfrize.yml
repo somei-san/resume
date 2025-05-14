@@ -28,7 +28,7 @@ jobs:
       - name: Convert resume.md to PDF
         run: |
           mkdir -p docs
-          pandoc resume.md -o docs/resume.pdf --pdf-engine=xelatex -V documentclass=article -V mainfont="Noto Sans CJK JP""
+          pandoc resume.md -o docs/resume.pdf --pdf-engine=xelatex -V documentclass=article -V mainfont="Noto Sans CJK JP"
 
       - name: Commit PDF
         run: |
