@@ -23,7 +23,7 @@ jobs:
       - name: Convert resume.md to PDF
         run: |
           mkdir -p output
-          pandoc resume.md -o output/resume.pdf --pdf-engine=xelatex -V documentclass=ltjarticle
+          pandoc resume.md -o output/resume.pdf --pdf-engine=lualatex -V documentclass=ltjarticle
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
