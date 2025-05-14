@@ -35,7 +35,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add docs/resume.pdf
-          git commit -m "Auto-generate PDF"
+          git commit -m "🤖 Auto-generate PDF"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
