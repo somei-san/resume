@@ -23,4 +23,3 @@ Qitta: https://qiita.com/goyaYellow
 ## 資格など
 
 ## 学歴
-
