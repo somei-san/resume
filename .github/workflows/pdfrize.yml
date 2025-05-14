@@ -19,16 +19,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc and LaTeX
+      - name: Install Pandoc and LaTeX and Font
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-lang-japanese
+          sudo apt-get install -y fonts-noto-cjk
 
       - name: Convert resume.md to PDF
         run: |
           mkdir -p docs
-          sudo apt-get install -y fonts-ipafont
-          pandoc resume.md -o docs/resume.pdf --pdf-engine=xelatex -V documentclass=article -V mainfont="IPAexMincho"
+          pandoc resume.md -o docs/resume.pdf --pdf-engine=xelatex -V documentclass=article -V mainfont="Noto Sans CJK JP""
 
       - name: Commit PDF
         run: |
