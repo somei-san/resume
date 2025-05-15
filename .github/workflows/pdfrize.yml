@@ -47,14 +47,14 @@ jobs:
         run: |
           pandoc resume.md -o docs/resume.html \
             --standalone \
-            --css=assets/vscode-light.css
+            --css=assets.css
 
       - name: Install Puppeteer
         run: npm install -g puppeteer-cli
 
       - name: Convert HTML to PDF
         run: |
-          npx puppeteer-cli print docs/resume.html docs/resume.pdf
+          npx puppeteer-cli print docs/resume.html docs/resume.pdf --no-sandbox
 
       - name: Commit PDF
         run: |
