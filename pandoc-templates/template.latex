@@ -1,10 +1,10 @@
 \documentclass[a4paper,12pt]{article}
 
-% サンセリフ系のフォントを全体に指定
+% フォント
 \usepackage{fontspec}
-\setmainfont{Noto Sans CJK JP}
-\setsansfont{Noto Sans CJK JP}
-\setmonofont{Noto Sans Mono CJK JP}
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\setmonofont{Menlo}
 
 \usepackage[margin=25mm]{geometry}
 
@@ -47,6 +47,8 @@ $else$
 $endif$
 
 \begin{document}
+
+\pagestyle{empty}
 
 $if(title)$
 \maketitle
