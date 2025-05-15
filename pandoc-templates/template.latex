@@ -1,26 +1,16 @@
-\documentclass[
-  a4paper,
-  captions=tableheading
-]{scrartcl}
+\documentclass[a4paper,12pt]{article}
 
+% サンセリフ系のフォントを全体に指定
 \usepackage{fontspec}
-\setmainfont{Noto Sans}
+\setmainfont{Noto Sans CJK JP}
+\setsansfont{Noto Sans CJK JP}
+\setmonofont{Noto Sans Mono CJK JP}
 
-\usepackage{xcolor}
-% load footmisc in order to customize footnotes (footmisc has to be loaded before hyperref, cf. https://tex.stackexchange.com/a/169124/144087)
-\usepackage[hang,flushmargin,bottom,multiple]{footmisc}
-\setlength{\footnotemargin}{0.8em} % set space between footnote nr and text
-\setlength{\footnotesep}{\baselineskip} % set space between multiple footnotes
-\setlength{\skip\footins}{0.3cm} % set space between page content and footnote
-\setlength{\footskip}{0.9cm} % set space between footnote and page bottom
+\usepackage[margin=25mm]{geometry}
 
-\usepackage[margin=2.5cm,includehead=true,includefoot=true,centering]{geometry}
-\usepackage{amsmath,amssymb}
 \usepackage{setspace}
-\usepackage[export]{adjustbox}
-\usepackage{graphicx}
-\usepackage{footnotebackref}
-\usepackage{etoolbox}
+\setstretch{1.4}
+
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
@@ -30,28 +20,33 @@
   pdfborder={0 0 0}
 }
 
-% Helvetica に
-\renewcommand{\rmdefault}{phv} % Helvetica に
-\renewcommand{\sfdefault}{phv} % サンセリフに統一
+% セクション見出しを太く・大きく
+\usepackage{sectsty}
+\sectionfont{\LARGE\bfseries}
+\subsectionfont{\Large\bfseries}
+\subsubsectionfont{\large\bfseries}
 
-$if(subtitle)$
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{$subtitle$}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{2.0em}{1.0em}
+\titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
+\titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
+
+\setlength{\parskip}{0.8em}
+\setlength{\parindent}{0pt}
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \\ $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$else$
+\date{}
 $endif$
 
-\title{$title$}
-\author{$for(author)$$author$$sep$ \and $endfor$}
-\date{$date$}
-
 \begin{document}
-
-\pagestyle{empty}
-\setlength{\parskip}{0.7em}
-\setlength{\parindent}{0pt}
 
 $if(title)$
 \maketitle
@@ -63,71 +58,6 @@ $abstract$
 \end{abstract}
 $endif$
 
-$if(has-frontmatter)$
-\frontmatter
-$endif$
-
-$if(first-chapter)$
-\setcounter{chapter}{$first-chapter$}
-\addtocounter{chapter}{-1}
-$endif$
-
-$for(include-before)$
-$include-before$
-
-$endfor$
-$if(toc)$
-$if(toc-title)$
-\renewcommand*\contentsname{$toc-title$}
-$endif$
-{
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$blue$endif$}
-$endif$
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-$if(toc-own-page)$
-\newpage
-$endif$
-}
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
-$if(lot)$
-\listoftables
-$endif$
-\setstretch{1.3}
-$if(has-frontmatter)$
-\mainmatter
-$endif$
 $body$
 
-$if(has-frontmatter)$
-\backmatter
-$endif$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$endif$
-$if(natbib)$
-$if(bibliography)$
-$if(biblio-title)$
-$if(has-chapters)$
-\renewcommand\bibname{$biblio-title$}
-$else$
-\renewcommand\refname{$biblio-title$}
-$endif$
-$endif$
-\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
-
-$endif$
-$endif$
-$if(biblatex)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-
-$endif$
-$for(include-after)$
-$include-after$
-
-$endfor$
 \end{document}
