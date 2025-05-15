@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-lang-japanese texlive-fonts-extra fonts-noto-cjk
+          sudo apt-get install -y pandoc texlive-xetex texlive-lang-japanese texlive-fonts-extra fonts-mplus
 
       - name: Convert resume.md to PDF
         run: |

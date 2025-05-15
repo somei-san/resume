@@ -3,15 +3,13 @@
 
 % フォント
 \usepackage{fontspec}
-\setmainfont{Noto Sans CJK JP}
-\setsansfont{Noto Sans CJK JP}
-\setmonofont{Noto Sans Mono CJK JP}
-
-% 日本語組版のために追加
+\setmainfont{M+ 1p}
+\setsansfont{M+ 1p}
+\setmonofont{M+ 1m}
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-\setCJKmonofont{Noto Sans Mono CJK JP}
+\setCJKmainfont{M+ 1p}
+\setCJKsansfont{M+ 1p}
+\setCJKmonofont{M+ 1m}
 
 % 余白
 \usepackage[margin=25mm]{geometry}
