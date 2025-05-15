@@ -3,13 +3,15 @@
 
 % フォント
 \usepackage{fontspec}
-\setmainfont{M+ 1p}
-\setsansfont{M+ 1p}
-\setmonofont{M+ 1m}
+\setmainfont{Noto Sans CJK JP}
+\setsansfont{Noto Sans CJK JP}
+\setmonofont{Noto Sans Mono CJK JP}
+
+% 日本語組版のために追加
 \usepackage{xeCJK}
-\setCJKmainfont{M+ 1p}
-\setCJKsansfont{M+ 1p}
-\setCJKmonofont{M+ 1m}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}
 
 % 余白
 \usepackage[margin=25mm]{geometry}
@@ -48,7 +50,7 @@
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
 \titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
 
-% セクション見出しとその本文は必ず同じページに表示されるようにする（見出しだけでページの末尾で切れないようにする）
+% セクション見出しとその本文は必ず同じページに表示されるようにする（見出し切れないようにする）
 \titleclass{\section}{straight}
 \titleformat{\section}[block]{\LARGE\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
