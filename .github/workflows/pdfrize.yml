@@ -24,37 +24,33 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-lang-japanese texlive-fonts-extra fonts-noto-cjk
 
-      # - name: Install Simple template
-      #   run: |
-      #     mkdir -p ~/.pandoc/templates
-      #     curl -L https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/examples/simple.latex -o ~/.pandoc/templates/simple.latex
-
-      # - name: Convert resume.md to PDF
-      #   run: |
-      #     mkdir -p docs
-      #     pandoc resume.md -o docs/resume.pdf \
-      #       --pdf-engine=xelatex \
-      #       --template=simple \
-      #       -V mainfont="Noto Sans CJK JP" \
-      #       -V sansfont="Noto Sans CJK JP" \
-      #       -V monofont="Noto Sans Mono CJK JP" \
-      #       -V colorlinks=true \
-      #       -V linkcolor=blue
-      #          -V fontsize=11pt \
-      #             -V geometry=top=25mm,bottom=25mm,left=25mm,right=25mm
-
-      - name: Convert Markdown to HTML
+      - name: Install Eisvogel template
         run: |
-          pandoc resume.md -o docs/resume.html \
-            --standalone \
-            --css=assets.css
+          mkdir -p ~/.pandoc/templates
+          git clone --depth 1 https://github.com/Wandmalfarbe/pandoc-latex-template.git /tmp/eisvogel
+          cp /tmp/eisvogel/template-multi-file/* ~/.pandoc/templates/
 
-      - name: Install Puppeteer
-        run: npm install -g puppeteer-cli
-
-      - name: Convert HTML to PDF
+      - name: Patch Eisvogel template (ヘッダー・フッター削除)
         run: |
-          npx puppeteer-cli print docs/resume.html docs/resume.pdf --no-sandbox
+          sed -i 's/\\pagestyle{fancy}/\\pagestyle{empty}/g' ~/.pandoc/templates/eisvogel.latex
+          sed -i 's/\\fancyhead{}/% \\fancyhead{}/g' ~/.pandoc/templates/eisvogel.latex
+          sed -i 's/\\fancyfoot{}/% \\fancyfoot{}/g' ~/.pandoc/templates/eisvogel.latex
+          sed -i 's/\\renewcommand{\\headrulewidth}{0.4pt}/% \\renewcommand{\\headrulewidth}{0.4pt}/g' ~/.pandoc/templates/eisvogel.latex
+          sed -i 's/\\renewcommand{\\footrulewidth}{0pt}/% \\renewcommand{\\footrulewidth}{0pt}/g' ~/.pandoc/templates/eisvogel.latex
+
+      - name: Convert resume.md to PDF
+        run: |
+          mkdir -p docs
+          pandoc resume.md -o docs/resume.pdf \
+            --pdf-engine=xelatex \
+            --template=eisvogel \
+            -M titlepage=false \
+            -M toc=false \
+            -M colorlinks=true \
+            -M title="" \
+            -V mainfont="Noto Sans CJK JP" \
+            -V sansfont="Noto Sans CJK JP" \
+            -V monofont="Noto Sans Mono CJK JP"
 
       - name: Commit PDF
         run: |
