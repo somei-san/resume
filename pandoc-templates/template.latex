@@ -3,13 +3,13 @@
 
 % フォント
 \usepackage{fontspec}
-\setmainfont{M+ 1p}
-\setsansfont{M+ 1p}
-\setmonofont{M+ 1m}
+\setmainfont{M+ 1p Regular}
+\setsansfont{M+ 1p Regular}
+\setmonofont{M+ 1m Regular}
 \usepackage{xeCJK}
-\setCJKmainfont{M+ 1p}
-\setCJKsansfont{M+ 1p}
-\setCJKmonofont{M+ 1m}
+\setCJKmainfont{M+ 1p Regular}
+\setCJKsansfont{M+ 1p Regular}
+\setCJKmonofont{M+ 1m Regular}
 
 % 余白
 \usepackage[margin=25mm]{geometry}
