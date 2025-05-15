@@ -40,6 +40,8 @@ jobs:
             -M titlepage:false \
             -M toc:false \
             -M colorlinks:true \
+            -M pagestyle:empty \
+            -M section-titles:true \
             -V mainfont="Noto Sans CJK JP"
 
       - name: Commit PDF
