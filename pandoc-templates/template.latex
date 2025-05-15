@@ -22,10 +22,10 @@
 }
 
 % セクション見出しを太く・大きく
-\usepackage{sectsty}
-\sectionfont{\LARGE\bfseries}
-\subsectionfont{\Large\bfseries}
-\subsubsectionfont{\large\bfseries}
+% \usepackage{sectsty}
+% \sectionfont{\LARGE\bfseries}
+% \subsectionfont{\Large\bfseries}
+% \subsubsectionfont{\large\bfseries}
 
 \usepackage{titlesec}
 % セクション番号を非表示にする
