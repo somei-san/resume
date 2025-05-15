@@ -18,6 +18,7 @@
 % テーブル表示
 \usepackage{longtable}
 \usepackage{array}
+\usepackage{booktabs}
 
 \usepackage{setspace}
 \setstretch{1.4}
