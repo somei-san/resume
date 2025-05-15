@@ -27,6 +27,8 @@
 \subsubsectionfont{\large\bfseries}
 
 \usepackage{titlesec}
+% セクション番号を非表示にする
+\setcounter{secnumdepth}{0}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
 \titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
