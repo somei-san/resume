@@ -42,12 +42,18 @@
 % \subsectionfont{\Large\bfseries}
 % \subsubsectionfont{\large\bfseries}
 
-% セクション番号を非表示にする
 \usepackage{titlesec} % 「セクション（章・節）」のタイトル表示を細かくカスタマイズできるパッケージ
+
+% セクション番号を非表示にする
 \setcounter{secnumdepth}{0}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
 \titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
+
+% セクション見出しとその本文は必ず同じページに表示されるようにする（見出しだけでページの末尾で切れないようにする）
+\titleclass{\section}{straight}
+\titleformat{\section}[block]{\LARGE\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{2.0em}{1.0em}
 
 % 段落設定
 \setlength{\parskip}{0.8em} % 段落の間にスペースを入れる
