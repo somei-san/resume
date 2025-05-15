@@ -42,9 +42,9 @@
 
 ## 資格など
 
-* Google Cloud Professional Cloud Developer (2024/1/10)
-* 日商商業簿記3級 (2025/4/18)
-* 普通自動車免許
+- Google Cloud Professional Cloud Developer (2024/1/10)
+- 日商商業簿記3級 (2025/4/18)
+- 普通自動車免許
 
 ## リンク
 
