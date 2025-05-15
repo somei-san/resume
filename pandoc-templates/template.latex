@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 % フォント
 \usepackage{fontspec}
@@ -6,8 +6,7 @@
 \setsansfont{Noto Sans CJK JP}
 \setmonofont{Noto Sans Mono CJK JP}
 
-
-\usepackage[margin=25mm]{geometry}
+\usepackage[margin=32mm]{geometry}
 
 \usepackage{setspace}
 \setstretch{1.4}
