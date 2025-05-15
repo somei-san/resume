@@ -15,10 +15,11 @@
 % 余白
 \usepackage[margin=32mm]{geometry}
 
-% テーブル表示
+% テーブル表示対応
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{booktabs}
+\usepackage{calc}
 
 \usepackage{setspace}
 \setstretch{1.4}
