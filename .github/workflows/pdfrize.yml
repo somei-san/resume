@@ -30,6 +30,7 @@ jobs:
           mkdir -p docs
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
+            --from markdown \
             -V documentclass=article \
             -V mainfont="Noto Sans CJK JP" \
             -V fontsize=11pt \
