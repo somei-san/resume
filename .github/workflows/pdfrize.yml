@@ -37,10 +37,10 @@ jobs:
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
             --template=eisvogel \
-            -V mainfont="Noto Sans CJK JP" \
-            -V titlepage=false \
-            -V toc=false \
-            -V colorlinks=true
+            -M titlepage:false \
+            -M toc:false \
+            -M colorlinks:true \
+            -V mainfont="Noto Sans CJK JP"
 
       - name: Commit PDF
         run: |
