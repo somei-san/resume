@@ -1,7 +1,17 @@
 {
   "cSpell.words": [
+    "colorlinks",
+    "documentclass",
+    "fontsize",
+    "lineheight",
+    "linkcolor",
+    "mainfont",
     "noto",
+    "pagestyle",
     "Pandoc",
-    "texlive"
+    "pdfrize",
+    "texlive",
+    "xelatex",
+    "xetex"
   ]
 }
