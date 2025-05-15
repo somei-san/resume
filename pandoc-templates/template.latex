@@ -58,6 +58,11 @@ $abstract$
 \end{abstract}
 $endif$
 
+% Pandoc のリスト対応
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+}
+
 $body$
 
 \end{document}
