@@ -17,6 +17,7 @@
 
 % テーブル表示
 \usepackage{longtable}
+\usepackage{array}
 
 \usepackage{setspace}
 \setstretch{1.4}
