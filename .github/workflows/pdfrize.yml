@@ -44,7 +44,11 @@ jobs:
             -M title="" \
             -V mainfont="Noto Sans CJK JP" \
             -V sansfont="Noto Sans CJK JP" \
-            -V monofont="Noto Sans Mono CJK JP"
+            -V monofont="Noto Sans Mono CJK JP" \
+            -M footcolor=white \
+            -M headrulewidth=0pt \
+            -M footrulewidth=0pt \
+            -M page-numbering=false
 
       - name: Commit PDF
         run: |
