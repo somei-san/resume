@@ -36,19 +36,11 @@ jobs:
           mkdir -p docs
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
-            --template=eisvogel \
-            -M titlepage=false \
-            -M toc=false \
-            -M colorlinks=true \
-            -M pagestyle=empty \
-            -M title="" \
             -V mainfont="Noto Sans CJK JP" \
             -V sansfont="Noto Sans CJK JP" \
             -V monofont="Noto Sans Mono CJK JP" \
-            -M footcolor=white \
-            -M headrulewidth=0pt \
-            -M footrulewidth=0pt \
-            -M page-numbering=false
+            -V fontsize=11pt \
+            -V geometry=top=25mm,bottom=25mm,left=25mm,right=25mm
 
       - name: Commit PDF
         run: |
