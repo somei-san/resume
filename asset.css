@@ -1,9 +1,0 @@
-body {
-  background: #fff;
-  color: #1a1a1a;
-  font-family: "Noto Sans CJK JP", "Noto Sans", "Meiryo", sans-serif;
-  line-height: 1.7;
-}
-h1, h2, h3, h4 { color: #222; font-weight: bold; }
-code, pre { background: #f6f8fa; color: #e45649; }
-a { color: #0066cc; }

@@ -24,26 +24,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-lang-japanese texlive-fonts-extra fonts-noto-cjk
 
-      - name: Install Eisvogel template
-        run: |
-          mkdir -p ~/.pandoc/templates
-          git clone --depth 1 https://github.com/Wandmalfarbe/pandoc-latex-template.git /tmp/eisvogel
-          cp /tmp/eisvogel/template-multi-file/* ~/.pandoc/templates/
-
-      - name: Patch Eisvogel template (ヘッダー・フッター削除)
-        run: |
-          sed -i 's/\\pagestyle{fancy}/\\pagestyle{empty}/g' ~/.pandoc/templates/eisvogel.latex
-          sed -i 's/\\fancyhead{}/% \\fancyhead{}/g' ~/.pandoc/templates/eisvogel.latex
-          sed -i 's/\\fancyfoot{}/% \\fancyfoot{}/g' ~/.pandoc/templates/eisvogel.latex
-          sed -i 's/\\renewcommand{\\headrulewidth}{0.4pt}/% \\renewcommand{\\headrulewidth}{0.4pt}/g' ~/.pandoc/templates/eisvogel.latex
-          sed -i 's/\\renewcommand{\\footrulewidth}{0pt}/% \\renewcommand{\\footrulewidth}{0pt}/g' ~/.pandoc/templates/eisvogel.latex
-
       - name: Convert resume.md to PDF
         run: |
           mkdir -p docs
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
-            --template=eisvogel \
+            --template=pandoc-templates/custom_eisvogel.latex \
             -M titlepage=false \
             -M toc=false \
             -M colorlinks=true \
