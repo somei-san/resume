@@ -12,7 +12,11 @@
 \setCJKsansfont{Noto Sans CJK JP}
 \setCJKmonofont{Noto Sans Mono CJK JP}
 
+% 余白
 \usepackage[margin=32mm]{geometry}
+
+% テーブル表示
+\usepackage{longtable}
 
 \usepackage{setspace}
 \setstretch{1.4}
