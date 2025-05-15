@@ -7,6 +7,7 @@ on:
     paths:
       - resume.md
       - .github/workflows/pdfrize.yml
+      - pandoc-templates/template.latex
 
 permissions:
   contents: write
@@ -29,7 +30,7 @@ jobs:
           mkdir -p docs
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
-            --template=pandoc-templates/custom_eisvogel.latex \
+            --template=pandoc-templates/template.latex \
             -M titlepage=false \
             -M toc=false \
             -M colorlinks=true \
