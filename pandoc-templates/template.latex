@@ -6,6 +6,12 @@
 \setsansfont{Noto Sans CJK JP}
 \setmonofont{Noto Sans Mono CJK JP}
 
+% 日本語組版のために追加
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}
+
 \usepackage[margin=32mm]{geometry}
 
 \usepackage{setspace}
