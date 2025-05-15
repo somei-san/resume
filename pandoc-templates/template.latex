@@ -42,9 +42,8 @@
 % \subsectionfont{\Large\bfseries}
 % \subsubsectionfont{\large\bfseries}
 
-「セクション（章・節）」のタイトル表示を細かくカスタマイズできるパッケージ
-\usepackage{titlesec}
 % セクション番号を非表示にする
+\usepackage{titlesec} % 「セクション（章・節）」のタイトル表示を細かくカスタマイズできるパッケージ
 \setcounter{secnumdepth}{0}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
@@ -54,35 +53,10 @@
 \setlength{\parskip}{0.8em} % 段落の間にスペースを入れる
 \setlength{\parindent}{0pt} % 段落の先頭の字下げをしない
 
-% メタデータ指定があれば対応する処理(今はない)
-$if(title)$
-\title{$title$}
-$endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \\ $endfor$}
-$endif$
-$if(date)$
-\date{$date$}
-$else$
-\date{}
-$endif$
-
 \begin{document}
 
 % ページ番号などのヘッダー・フッターを全ページ非表示にする
 \pagestyle{empty}
-
-% titleが指定されている場合だけ、LaTeXの\maketitleコマンドでタイトル・著者・日付を表紙として表示する。(今はしていない)
-$if(title)$
-\maketitle
-$endif$
-
-% Markdownの「abstract」メタデータがある場合だけ、その内容をLaTeXのabstract環境で挿入
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
 
 % Pandoc のリスト対応
 \providecommand{\tightlist}{%
