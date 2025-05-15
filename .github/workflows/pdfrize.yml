@@ -28,7 +28,7 @@ jobs:
       - name: Install Eisvogel template
         run: |
           mkdir -p ~/.pandoc/templates
-          curl -L https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.latex -o ~/.pandoc/templates/eisvogel.latex
+          curl -L https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/template-multi-file/eisvogel.latex -o ~/.pandoc/templates/eisvogel.latex
 
       - name: Convert resume.md to PDF
         run: |
