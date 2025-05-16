@@ -35,6 +35,7 @@
 \renewenvironment{table}[1][H]{\begin{flushleft}\begin{minipage}{\linewidth}}{\end{minipage}\end{flushleft}}
 
 % longtableも左寄せ
+\usepackage{etoolbox}
 \makeatletter
 \patchcmd{\longtable}{\centering}{}{}{}
 \makeatother
