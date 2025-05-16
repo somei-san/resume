@@ -22,24 +22,6 @@
 \usepackage{booktabs}
 \usepackage{calc}
 
-% 表を左寄せにする
-\usepackage{float}
-\floatplacement{table}{H}
-\makeatletter
-\def\table@float{%
-  \let\@float\@xfloat
-  \def\@captype{table}%
-  \@float{table}[H]%
-}
-\makeatother
-\renewenvironment{table}[1][H]{\begin{flushleft}\begin{minipage}{\linewidth}}{\end{minipage}\end{flushleft}}
-
-% longtableも左寄せ
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\longtable}{\centering}{}{}{}
-\makeatother
-
 % 行間
 \usepackage{setspace}
 \setstretch{1.2}
