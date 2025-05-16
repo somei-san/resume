@@ -1,8 +1,11 @@
 {
   "ignorePaths": [
-    "pandoc-templates/template.latex"
+    "pandoc-templates/template.latex",
+    ".github/workflows/pdfrize.yml"
   ],
   "words": [
+    "Qiita",
+    "Speakerdeck",
     "Gitea"
   ]
 }
