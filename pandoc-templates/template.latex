@@ -70,7 +70,7 @@
 
 % Pandoc のリスト対応
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0.5em}\setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0em}\setlength{\parskip}{0pt}
 }
 
 $body$
