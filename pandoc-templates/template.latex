@@ -57,7 +57,7 @@
 
 % 段落設定
 \setlength{\parskip}{0.8em} % 段落の間にスペースを入れる
-\setlength{\parindent}{0pt} % 段落の先頭の字下げをしない
+% \setlength{\parindent}{0pt} % 段落の先頭の字下げをしない
 
 \begin{document}
 
