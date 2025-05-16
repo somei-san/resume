@@ -42,11 +42,11 @@
 % \subsectionfont{\Large\bfseries}
 % \subsubsectionfont{\large\bfseries}
 
+\usepackage{titlesec} % 「セクション（章・節）」のタイトル表示を細かくカスタマイズできるパッケージ
+
 % セクション間の余白を調整してメリハリをつける
 \titlespacing*{\section}{0pt}{2.5em}{1.5em}
 \titlespacing*{\subsection}{0pt}{2.0em}{1.0em}
-
-\usepackage{titlesec} % 「セクション（章・節）」のタイトル表示を細かくカスタマイズできるパッケージ
 
 % セクション番号を非表示にする
 \setcounter{secnumdepth}{0}
