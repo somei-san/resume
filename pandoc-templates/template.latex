@@ -3,14 +3,14 @@
 
 % フォント
 \usepackage{fontspec}
-\setmainfont{Noto Sans JP}
-\setsansfont{Noto Sans JP}
+\setmainfont{Noto Sans CJK JP}
+\setsansfont{Noto Sans CJK JP}
 \setmonofont{Noto Sans Mono CJK JP}
 
 % 日本語組版のために追加
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans JP}
-\setCJKsansfont{Noto Sans JP}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
 \setCJKmonofont{Noto Sans Mono CJK JP}
 
 % 余白
