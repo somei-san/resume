@@ -1,5 +1,8 @@
 {
   "ignorePaths": [
     "pandoc-templates/template.latex"
+  ],
+  "words": [
+    "Gitea"
   ]
 }
