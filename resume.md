@@ -104,7 +104,7 @@ PoCソフト実装においては、AWSコンサル支援のもとアーキテ�
 - 期間: 2018年10月 ~ 2020年10月
 - 規模: 8名（社員5名、協力3名）
 - 役割: アーキテクト、開発者
-- 技術: C#、SQL Server、AI(多層パーセプトロン、One-Class SVM)、Gitea
+- 技術: C#、SQL Server、Python、AI(多層パーセプトロン、One-Class SVM)、Gitea
 
 【業務内容】
 - AIアルゴリズム改良
