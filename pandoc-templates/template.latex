@@ -34,6 +34,11 @@
 \makeatother
 \renewenvironment{table}[1][H]{\begin{flushleft}\begin{minipage}{\linewidth}}{\end{minipage}\end{flushleft}}
 
+% longtableも左寄せ
+\makeatletter
+\patchcmd{\longtable}{\centering}{}{}{}
+\makeatother
+
 % 行間
 \usepackage{setspace}
 \setstretch{1.2}
