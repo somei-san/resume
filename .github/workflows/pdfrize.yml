@@ -31,6 +31,12 @@ jobs:
           pandoc resume.md -o docs/resume.pdf \
             --pdf-engine=xelatex \
             --template=pandoc-templates/template.latex \
+            -V mainfont="Noto Sans CJK JP" \
+            -V sansfont="Noto Sans CJK JP" \
+            -V monofont="Noto Sans Mono CJK JP" \
+            -V cjkfont="Noto Sans CJK JP" \
+            -V cjksansfont="Noto Sans CJK JP" \
+            -V cjkmonofont="Noto Sans Mono CJK JP" \
             -M titlepage=false \
             -M toc=false \
             -M colorlinks=true \

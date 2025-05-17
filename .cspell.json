@@ -1,7 +1,8 @@
 {
   "ignorePaths": [
     "pandoc-templates/template.latex",
-    ".github/workflows/pdfrize.yml"
+    ".github/workflows/pdfrize.yml",
+    "testGenerate.sh"
   ],
   "words": [
     "Gitea",

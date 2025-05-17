@@ -3,15 +3,19 @@
 
 % フォント
 \usepackage{fontspec}
-\setmainfont{Noto Sans CJK JP}
-\setsansfont{Noto Sans CJK JP}
-\setmonofont{Noto Sans Mono CJK JP}
+\setmainfont{$mainfont$}
+\setsansfont{$sansfont$}
+\setmonofont{$monofont$}
 
 % 日本語組版のために追加
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-\setCJKmonofont{Noto Sans Mono CJK JP}
+\setCJKmainfont{$cjkfont$}
+\setCJKsansfont{$cjksansfont$}
+\setCJKmonofont{$cjkmonofont$}
+
+% mac os 上で pdf 生成する際のフォント設定。上の設定の該当部と差し替える
+% \setmonofont{Noto Sans Mono}
+% \setCJKmonofont{Noto Sans Mono}
 
 % 余白
 \usepackage[margin=25mm]{geometry}
@@ -52,7 +56,7 @@
 \setcounter{secnumdepth}{0}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
-% \titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
 
 % セクション見出しとその本文は必ず同じページに表示されるようにする（見出し切れないようにする）
 \titleclass{\section}{straight}
