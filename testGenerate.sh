@@ -1,5 +1,6 @@
 #
 # Mac OS のローカルで pdf 生成を実行したい場合はこれを実行する
+# `sh testGenerate.sh`
 #
 # 実行には以下の依存をインストールする必要がある
 #
@@ -13,7 +14,7 @@
 #
 # # フォント
 # brew tap homebrew/cask-fonts
-# brew install --cask font-noto-sans-cjk-jp
+# brew install --cask font-noto-sans-mono
 # ```
 
 pandoc resume.md -o docs/test.pdf \
@@ -22,9 +23,6 @@ pandoc resume.md -o docs/test.pdf \
   -V mainfont="Noto Sans CJK JP" \
   -V sansfont="Noto Sans CJK JP" \
   -V monofont="Noto Sans Mono" \
-  -V cjkfont="Noto Sans CJK JP" \
-  -V cjksansfont="Noto Sans CJK JP" \
-  -V cjkmonofont="Noto Sans Mono" \
   -M titlepage=false \
   -M toc=false \
   -M colorlinks=true \

@@ -9,13 +9,9 @@
 
 % 日本語組版のために追加
 \usepackage{xeCJK}
-\setCJKmainfont{$cjkfont$}
-\setCJKsansfont{$cjksansfont$}
-\setCJKmonofont{$cjkmonofont$}
-
-% mac os 上で pdf 生成する際のフォント設定。上の設定の該当部と差し替える
-% \setmonofont{Noto Sans Mono}
-% \setCJKmonofont{Noto Sans Mono}
+\setCJKmainfont{$mainfont$}
+\setCJKsansfont{$sansfont$}
+\setCJKmonofont{$monofont$}
 
 % 余白
 \usepackage[margin=25mm]{geometry}
