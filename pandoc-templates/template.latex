@@ -52,7 +52,7 @@
 \setcounter{secnumdepth}{0}
 \titlespacing*{\section}{0pt}{2.0em}{1.0em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.7em}
-\titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
+% \titlespacing*{\subsubsection}{0pt}{1.0em}{0.5em}
 
 % セクション見出しとその本文は必ず同じページに表示されるようにする（見出し切れないようにする）
 \titleclass{\section}{straight}
