@@ -1,6 +1,7 @@
 #
 # Mac OS のローカルで pdf 生成を実行したい場合はこれを実行する
-# `sh testGenerate.sh`
+#
+# `sh testGenerate.sh` を実行すると `./doc/test/pdf` として pdf が生成される
 #
 # 実行には以下の依存をインストールする必要がある
 #
