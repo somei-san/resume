@@ -38,7 +38,7 @@
 - 期間: 2024年9月~2024年12月
 - 規模: 6名
 - 役割: チームマネージャー、開発者
-- 技術: Kotlin、React、PostgreSQL
+- 技術: Kotlin、React、PostgreSQL、Google Cloud
 
 【業務内容】  
 
@@ -58,7 +58,7 @@
 - 期間: 2023年12月 ~ 2024年8月
 - 規模: 9名(エンジニア3~4名、ステークホルダー5名)
 - 役割: 立ち上げメンバー、改善実推進のリード
-- 技術: Kotlin、React、PostgreSQL、Go、GoogleAppScript
+- 技術: Kotlin、React、PostgreSQL、Google Cloud、Go、GoogleAppScript
 
 【業務内容】
 
