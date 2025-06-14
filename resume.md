@@ -147,8 +147,9 @@ AIアルゴリズムの運用性検討要員としてアサイン→アーキテ
 ## リンク
 
 - [Github](https://github.com/somei-san)
-- [Qiita](https://qiita.com/goyaYellow)
 - [Speakerdeck](https://speakerdeck.com/somei)
+- [Qiita](https://qiita.com/goyaYellow)
+- [Zenn](https://zenn.dev/goya_yellow)
 
 ## 対外発表
 
